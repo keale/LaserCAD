@@ -62,9 +62,9 @@ A.draw()
 
 A = Beam(distribution='square') # We can change the distribution to 'square', 'cone', 'Gaussian', and 'circular'
 A.draw()
-B = Beam()
-B.make_circular_distribution() # We can also change the distribution by function "make_cone_distribution", "make_square_distribution", "make_circular_distribution", and "make_Gaussian_distribution"
-B.draw()
+# B = Beam(distribution='circular')
+# # B.make_circular_distribution() # We can also change the distribution by function "make_cone_distribution", "make_square_distribution", "make_circular_distribution", and "make_Gaussian_distribution"
+# B.draw()
 
  # Next, we built some optical elements for construction, there is a short introduction of some: Mirror, Lens, and Grating.
  # The default mirror is the flat mirror.

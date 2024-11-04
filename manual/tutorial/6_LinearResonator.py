@@ -18,11 +18,10 @@ if not pfad in sys.path:
 
 
 from LaserCAD.freecad_models import clear_doc, setview, freecad_da
-from LaserCAD.basic_optics import Mirror, Beam, Composition, inch
-from LaserCAD.basic_optics import Curved_Mirror, Ray, Component
-from LaserCAD.basic_optics import LinearResonator, Lens
-from LaserCAD.basic_optics import Crystal
-from LaserCAD.non_interactings import Faraday_Isolator, Pockels_Cell, Lambda_Plate
+from LaserCAD.basic_optics import Mirror,  inch
+from LaserCAD.basic_optics import Curved_Mirror
+from LaserCAD.basic_optics import LinearResonator
+from LaserCAD.non_interactings import  Pockels_Cell, Lambda_Plate
 
 
 if freecad_da:
@@ -67,10 +66,6 @@ reso.add_on_axis(Curved_Mirror(radius=2000))
 # Draw ALL components and their mounts, compute the eigenmode (TEM00)
 # and draws it aus gaussian beam (this may take some seconds)
 reso.draw()
-
-
-from LaserCAD.freecad_models.freecad_model_mirror import model_mirror
-
 
 if freecad_da:
   setview()

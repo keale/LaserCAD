@@ -5,23 +5,23 @@ Created on Sat Aug 19 13:16:37 2023
 @author: mens
 """
 
-# import numpy as np
-# import sys
+import numpy as np
+import sys
 
-# pfad = __file__
-# pfad = pfad.replace("\\","/") #folder conventions windows linux stuff
-# pfad = pfad.lower()
-# ind = pfad.rfind("lasercad")
-# pfad = pfad[0:ind-1]
-# if not pfad in sys.path:
-#   sys.path.append(pfad)
+pfad = __file__
+pfad = pfad.replace("\\","/") #folder conventions windows linux stuff
+pfad = pfad.lower()
+ind = pfad.rfind("lasercad")
+pfad = pfad[0:ind-1]
+if not pfad in sys.path:
+  sys.path.append(pfad)
 
 
-# from LaserCAD.non_interactings import Iris
-# from LaserCAD.non_interactings import Lambda_Plate
+from LaserCAD.non_interactings import Iris, Crystal
+from LaserCAD.non_interactings import Lambda_Plate
 
 from LaserCAD.freecad_models import clear_doc, setview, freecad_da
-from LaserCAD.basic_optics import Mirror,Crystal
+from LaserCAD.basic_optics import Mirror
 from LaserCAD.basic_optics import Beam,Grating, Composition, inch, Curved_Mirror, Ray, Geom_Object, LinearResonator, Lens, Component
 from LaserCAD.freecad_models.utils import thisfolder, load_STL
 from LaserCAD.basic_optics.mount import Unit_Mount,Post, Composed_Mount
